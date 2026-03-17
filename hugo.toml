@@ -1,0 +1,4 @@
+baseURL = 'https://masakai.github.io/'
+languageCode = 'ja'
+title = 'masakai.github.io'
+theme = "ananke"
