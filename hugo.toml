@@ -3,3 +3,10 @@ languageCode = 'ja'
 title = '坂井の開発記録その他'
 copyright = '株式会社　リバーランズ・コンサルティング　Masanori Sakai'
 theme = "ananke"
+
+[params]
+  # サイト全体のデフォルト背景画像を設定する場合（例: static/images/background.jpg を配置）
+  featured_image = "/images/gohugo-default-sample-hero-image.jpg"
+  
+  # 背景色のクラス（画像がない場合。Tachyonsのクラスが使えます）
+  background_color_class = "bg-black"
