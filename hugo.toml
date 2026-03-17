@@ -1,4 +1,5 @@
 baseURL = 'https://masakai.github.io/'
 languageCode = 'ja'
-title = 'masakai.github.io'
+title = '坂井の開発記録その他'
+copyright = '株式会社　リバーランズ・コンサルティング　Masanori Sakai'
 theme = "ananke"
