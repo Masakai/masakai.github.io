@@ -1,8 +1,10 @@
 baseURL = 'https://masakai.github.io/'
 languageCode = 'ja'
+hasCJKLanguage = true
 title = '坂井の開発ー徒然なるままに'
 copyright = '株式会社　リバーランズ・コンサルティング　Masanori Sakai'
 theme = "ananke"
+summaryLength = 70
 
 [params]
   # サイト全体のデフォルト背景画像を設定する場合（例: static/images/background.jpg を配置）
