@@ -9,4 +9,14 @@ theme = "ananke"
   # featured_image = "/images/background.jpg"
   
   # 背景色のクラス（画像がない場合。Tachyonsのクラスが使えます）
-  background_color_class = "bg-black"
+  # プロフェッショナルな印象を与えるために濃紺（bg-navy）を設定
+  background_color_class = "bg-navy"
+
+  # ボディの背景色とフォント設定
+  body_classes = "avenir bg-white"
+
+  # テキストの色
+  text_color = "mid-gray"
+
+  # カスタムCSSの登録
+  custom_css = ["custom.css"]

@@ -1,0 +1,31 @@
+/* プロフェッショナルなブログパレットのためのカスタムスタイル */
+
+/* リンクの色を少し落ち着いた紺色に変更 */
+.link {
+  transition: color 0.15s ease-in;
+}
+
+.link:hover {
+  color: #00449e; /* navy */
+}
+
+/* メインコンテンツの幅を調整して読みやすく */
+.measure-wide {
+  max-width: 48em;
+}
+
+/* 記事内の見出し（H1-H6）にプロフェッショナルな重みを持たせる */
+h1, h2, h3, h4, h5, h6 {
+  color: #1a1a1a;
+  font-family: 'avenir', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ヘッダーの背景色を少し調整する場合（Tachyonsだけでは足りない細かな調整） */
+.bg-navy {
+  background-color: #001b44; /* より深い紺色 */
+}
+
+/* フッターの色をヘッダーと合わせる */
+footer.bg-navy {
+  background-color: #001b44;
+}
