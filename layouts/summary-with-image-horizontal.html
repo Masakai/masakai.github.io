@@ -1,0 +1,20 @@
+{{ $featured_image := partials.Include "func/GetFeaturedImage.html" . }}
+<article class="bb b--black-10 mb3">
+  <div class="flex flex-row-ns">
+    {{ if $featured_image }}
+    <div class="w-100 w-40-ns flex-shrink-0">
+      <a href="{{ .RelPermalink }}" class="db">
+        <img src="{{ $featured_image }}" alt="{{ .Title }}" class="w-100 db" style="object-fit: cover; max-height: 200px;">
+      </a>
+    </div>
+    {{ end }}
+    <div class="w-100 {{ if $featured_image }}w-60-ns pl3-ns{{ end }} pv2">
+      <h2 class="f4 fw6 mt0 mb1">
+        <a href="{{ .RelPermalink }}" class="link black dim">{{ .Title }}</a>
+      </h2>
+      <time class="f6 mid-gray db mb2">{{ .Date.Format site.Params.date_format }}</time>
+      <p class="f6 mid-gray lh-copy mt0 mb2">{{ .Summary }}</p>
+      <a href="{{ .RelPermalink }}" class="f6 link dim ba bw1 ph3 pv2 mb2 dib black">続きを読む →</a>
+    </div>
+  </div>
+</article>
