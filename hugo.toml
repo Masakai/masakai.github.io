@@ -6,19 +6,36 @@ copyright = '株式会社　リバーランズ・コンサルティング　Masa
 theme = "ananke"
 summaryLength = 70
 
+[[menus.main]]
+  name = 'Home'
+  pageRef = '/'
+  weight = 10
+
+[[menus.main]]
+  name = '記事'
+  pageRef = '/posts'
+  weight = 20
+
+[[menus.main]]
+  name = 'About'
+  pageRef = '/about'
+  weight = 30
+
 [params]
   # サイト全体のデフォルト背景画像を設定する場合（例: static/images/background.jpg を配置）
-  # featured_image = "/images/background.jpg"
-  
-  # 背景色のクラス（画像がない場合。Tachyonsのクラスが使えます）
-  # プロフェッショナルな印象を与えるために濃紺（bg-navy）を設定
-  background_color_class = "bg-navy"
+  featured_image = "/images/hero_image.png"
+  featured_image_class = "contain bg-center"
+  date_format = "2006-01-02"
 
-  # ボディの背景色とフォント設定
-  body_classes = "avenir bg-white"
-
-  # テキストの色
-  text_color = "mid-gray"
-
-  # カスタムCSSの登録
-  custom_css = ["custom.css"]
+#  # 背景色のクラス（画像がない場合。Tachyonsのクラスが使えます）
+#  # プロフェッショナルな印象を与えるために濃紺（bg-navy）を設定
+#  background_color_class = "bg-navy"
+#
+#  # ボディの背景色とフォント設定
+#  body_classes = "avenir bg-white"
+#
+#  # テキストの色
+#  text_color = "mid-gray"
+#
+#  # カスタムCSSの登録
+#  custom_css = ["custom.css"]
