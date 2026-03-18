@@ -4,6 +4,7 @@ draft = false
 title = 'はじめまして——15歳の「宣誓書」から始まった、私のこれまでとこれから'
 show_reading_time = true
 tags = ['自己紹介','GenbaFlow','思い']
+featured_image = '/images/about-me.png'
 +++
 
 はじめまして！ このブログを覗いてくださってありがとうございます。

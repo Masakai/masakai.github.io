@@ -2,6 +2,7 @@
 date = '2026-03-17T21:48:00+09:00'
 draft = false
 title = '流星・雲検出システム Meteo で夜空の観測を始めてみませんか？'
+featured_image = '/images/meteo.png'
 +++
 
 みなさん、夜空の観測は好きですか？ 私は大好きです！

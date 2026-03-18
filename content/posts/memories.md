@@ -4,6 +4,7 @@ draft = false
 title = '15歳の私が書いた「宣誓書」——気がついたら、その通りに生きていた'
 show_reading_time = true
 tags = ['GenbaFlow','思い']
+featured_image = '/images/memories.png'
 +++
 
 ## 1. 古い作文との再会
