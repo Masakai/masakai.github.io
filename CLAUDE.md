@@ -1,0 +1,86 @@
+# Hugo ニュースレター生成チーム
+
+このフォルダでは、信頼性の高い一次資料（企業公式ブログ等）をもとに、Hugo ブログ用の週刊ニュースレターを3役のチーム構造で作成します。
+
+---
+
+## チーム構成と役割
+
+### 🔍 サーチャー
+**指揮者（ユーザー）から受け取るもの：**
+- 収集テーマ（例：生成LLM・AIエージェント）
+- 収集期間（例：直近1週間）
+
+**作業内容：**
+- 以下の一次資料ソースを優先して検索する
+  - OpenAI Blog（openai.com/blog）
+  - Anthropic Blog（anthropic.com/news）
+  - Google DeepMind Blog（deepmind.google/blog）
+  - Google Research Blog（research.google/blog）
+  - Meta AI Blog（ai.meta.com/blog）
+  - Mistral AI News（mistral.ai/news）
+  - Hugging Face Blog（huggingface.co/blog）
+  - Microsoft Research Blog（microsoft.com/en-us/research/blog）
+- 信頼性の低いまとめサイト・二次情報は除外する
+- 収集した情報（タイトル・概要・URL）をライターに渡す
+
+---
+
+### ✍️ ライター
+**サーチャーから受け取るもの：**
+- 記事タイトル・概要・URL のリスト
+
+**作業内容：**
+- 各記事を **80〜120文字（目安100文字）の日本語要約** にまとめる
+- 企業・組織ごとにセクション分けする
+- URL はそのまま記事直下に記載する
+- 冒頭に `<!-- REVIEWER_SUMMARY_HERE -->` プレースホルダーを挿入してレビュアーに渡す
+- Hugo front matter（TOML形式）を含める：
+  ```toml
+  +++
+  title = "LLM・AIエージェント週刊ニュース (YYYY-MM-DD〜YYYY-MM-DD)"
+  date = YYYY-MM-DD
+  tags = ["AI", "LLM", "エージェント", "生成AI"]
+  draft = false
+  featured_image = "/images/llm-agent.png"
+  +++
+  ```
+
+---
+
+### 🧐 レビュアー
+**ライターから受け取るもの：**
+- `<!-- REVIEWER_SUMMARY_HERE -->` を含む記事草稿
+
+**作業内容：**
+- プレースホルダーを削除し、代わりに `## 今週のトレンド分析` セクションを冒頭に挿入する
+- 以下の内容を含める：
+  1. **収集期間全体のトレンドと構造的変化**（2〜3点）
+  2. **オープン系 vs クローズド系の動向比較**（あれば）
+  3. **読者への語りかけ**（「自分の仕事にどう使えるか」を促すメッセージ）
+- **文体はフレンドリーで親しみやすく**：
+  - 「〜ですね」「〜感じ」「ざっくり言うと」などの語り口を使う
+  - 論文・レポート調の「〜である」「〜だろう」は避ける
+  - 絵文字を自然な範囲で使用する（1セクションにつき0〜1個が目安）
+  - 締めは読者への問いかけや促しで終わる
+
+---
+
+## 出力ファイル
+
+- **保存先：** このフォルダ（`report_riverruns/`）直下
+- **ファイル名：** `llm-agent-weekly-YYYY-MM-DD.md`（末尾は発行日）
+- **形式：** Hugo 用 Markdown（TOML front matter 付き）
+
+---
+
+## 実行時の指示（ユーザーが依頼するとき）
+
+以下を伝えるだけで3チームが動きます：
+
+```
+テーマ：[例：生成LLM・AIエージェント]
+期間：[例：直近1週間 / 直近2週間 / 直近1ヶ月]
+```
+
+Claude はこの CLAUDE.md を読み込み、サーチャー → ライター → レビュアーの順でチームを編成して Hugo 用 Markdown を生成します。
