@@ -39,12 +39,13 @@
   ```toml
   +++
   title = "LLM・AIエージェント週刊ニュース (YYYY-MM-DD〜YYYY-MM-DD)"
-  date = YYYY-MM-DD
+  date = YYYY-MM-DDThh:mm:ss+09:00
   tags = ["AI", "LLM", "エージェント", "生成AI"]
   draft = false
   featured_image = "/images/llm-agent.png"
   +++
   ```
+  ※ `date` は時刻まで含めた ISO 8601 形式（例：`2026-03-20T09:00:00+09:00`）で記載すること
 
 ---
 
