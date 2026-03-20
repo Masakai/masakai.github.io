@@ -1,0 +1,5 @@
+{{- $featured_image := partial "func/GetFeaturedImage.html" . -}}
+{{- if $featured_image -}}
+  <meta property="og:image" content="{{ $featured_image }}" />
+  <meta name="twitter:image" content="{{ $featured_image }}" />
+{{- end -}}
