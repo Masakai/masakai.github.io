@@ -22,10 +22,28 @@ summaryLength = 70
   weight = 30
 
 [params]
+  mainSections = ["posts"]
   # サイト全体のデフォルト背景画像を設定する場合（例: static/images/background.jpg を配置）
   featured_image = "/images/hero_image.png"
   featured_image_class = "contain bg-center"
-  date_format = "2006-01-02"
+  date_format = "2006-01-02 15:04"
+
+  [params.ananke]
+    show_recent_posts = true
+
+  # Social Media Configuration
+  [params.ananke.social.follow]
+    networks = ["facebook", "x-twitter","github", "RSS"]
+
+  [params.ananke.social.facebook]
+    profilelink = "https://www.facebook.com/riverrunsconsulting/"
+
+  [params.ananke.social.x-twitter]
+    profilelink = "https://x.com/riverruns3071"
+
+  [params.ananke.social.github]
+    username = "masakai"
+
 
 #  # 背景色のクラス（画像がない場合。Tachyonsのクラスが使えます）
 #  # プロフェッショナルな印象を与えるために濃紺（bg-navy）を設定

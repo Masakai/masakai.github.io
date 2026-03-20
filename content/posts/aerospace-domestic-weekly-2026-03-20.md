@@ -1,6 +1,6 @@
 +++
 title = "航空宇宙産業 国内週刊ニュース (2026-03-13〜2026-03-20)"
-date = 2026-03-20
+date = 2026-03-20T15:31:00+09:00
 tags = ["航空宇宙", "宇宙開発", "防衛", "ロケット", "JAXA", "国内動向"]
 draft = false
 featured_image = "/images/aerospace-domestic.png"

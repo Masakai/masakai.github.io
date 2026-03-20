@@ -1,6 +1,6 @@
 +++
 title = "天文ニュース 国内外週刊 (2026-03-13〜2026-03-20)"
-date = 2026-03-20T09:00:00+09:00
+date = 2026-03-20T18:00:00+09:00
 tags = ["天文", "宇宙", "JWST", "系外惑星", "恒星間天体", "月食"]
 draft = false
 featured_image = "/images/astronomy.png"

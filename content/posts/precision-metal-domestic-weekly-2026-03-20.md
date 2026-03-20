@@ -1,6 +1,6 @@
 +++
 title = "精密金属加工・バリ取り・研磨 国内週刊ニュース (2026-03-13〜2026-03-20)"
-date = 2026-03-20
+date = 2026-03-20T14:49:48+09:00
 tags = ["精密加工", "バリ取り", "研磨", "製造業", "国内動向", "ロボット自動化"]
 draft = false
 featured_image = "/images/precision-metal-demostic.png"

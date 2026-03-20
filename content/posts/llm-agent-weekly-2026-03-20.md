@@ -1,6 +1,6 @@
 +++
 title = "LLM・AIエージェント週刊ニュース (2026-03-13〜2026-03-20)"
-date = 2026-03-20
+date = 2026-03-20T13:58:51+09:00
 tags = ["AI", "LLM", "エージェント", "生成AI"]
 draft = false
 featured_image = "/images/LLM_news_letter.png"
