@@ -27,6 +27,7 @@ summaryLength = 70
   featured_image = "/images/hero_image.png"
   featured_image_class = "contain bg-center"
   date_format = "2006-01-02 15:04"
+  fb_app_id = "" # TODO: 実際のFacebook App IDがある場合はここに入力してください
 
   [params.ananke]
     show_recent_posts = true

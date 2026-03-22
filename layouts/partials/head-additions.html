@@ -1,3 +1,6 @@
+{{- if or .Site.Params.fb_app_id .Params.fb_app_id -}}
+  <meta property="fb:app_id" content="{{ default .Site.Params.fb_app_id .Params.fb_app_id }}" />
+{{- end -}}
 {{- $featured_image := partial "func/GetFeaturedImage.html" . -}}
 {{- if $featured_image -}}
   <meta property="og:image" content="{{ $featured_image }}" />
