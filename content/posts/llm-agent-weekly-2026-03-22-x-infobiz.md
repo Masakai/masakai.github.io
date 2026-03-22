@@ -1,6 +1,6 @@
 +++
 title = "X.com観測: LLM・AIエージェント情報商材ビジネス (2026-02-22〜2026-03-22)"
-date = 2026-03-22T11:45:00+09:00
+date = 2026-03-22T11:30:00+09:00
 tags = ["AI", "LLM", "エージェント", "生成AI", "X.com", "情報商材"]
 draft = false
 featured_image = "/images/x-ai-infobiz-2026-03-22.png"
