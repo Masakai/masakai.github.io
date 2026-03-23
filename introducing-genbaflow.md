@@ -2,7 +2,7 @@
 date = '2026-03-23T10:32:55+09:00'
 draft = false
 title = '現場DXを、止めずに始める「GenbaFlow」の紹介'
-featured_image = '/images/genbaflow-intro-2026-03-23.svg'
+featured_image = '/images/genbaflow-intro-2026-03-23.png'
 +++
 
 製造現場の進捗管理って、まだまだ紙の日報や口頭連絡に頼っている場面が多いですよね。集計はあと回しになりがちですし、遅れや滞留に気づくのが翌日になってしまうことも珍しくありません。

@@ -2,7 +2,7 @@
 date = '2026-03-23T10:32:55+09:00'
 draft = false
 title = '現場DXを、止めずに始める「GenbaFlow」の紹介'
-featured_image = '/images/genbaflow-intro-2026-03-23.svg'
+featured_image = '/images/genbaflow-intro-2026-03-23.png'
 +++
 
 今回は、うちの会社で開発・運営をしているデジタル日報管理サービス「GenbaFlow」の宣伝です。
