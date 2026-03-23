@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="paper" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f7f0df"/>
+      <stop offset="100%" stop-color="#e6dbc5"/>
+    </linearGradient>
+    <filter id="noise" x="-20%" y="-20%" width="140%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="11" result="n"/>
+      <feColorMatrix in="n" type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.055"/>
+      </feComponentTransfer>
+    </filter>
+    <style>
+      .ink{stroke:#5d4a3a;stroke-linecap:round;stroke-linejoin:round;fill:none}
+      .fine{stroke-width:1.6}
+      .mid{stroke-width:2.5}
+      .bold{stroke-width:4}
+      .paperfill{fill:#f8f1e5;stroke:#6a5644;stroke-width:2.4}
+      .panel{fill:#efe3cf;stroke:#6a5644;stroke-width:2.2}
+      .accent{fill:#c68a58;fill-opacity:0.28;stroke:#875537;stroke-width:1.8}
+      .text{fill:#47392f;font-family:Menlo, Monaco, monospace}
+      .title{font-size:30px;font-weight:700;letter-spacing:1px}
+      .label{font-size:18px;font-weight:700}
+      .small{font-size:13px}
+    </style>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#paper)"/>
+  <rect width="1200" height="630" filter="url(#noise)" opacity="0.8"/>
+  <rect x="18" y="18" width="1164" height="594" rx="14" class="ink fine" opacity="0.65"/>
+  <rect x="32" y="32" width="1136" height="566" rx="12" class="ink fine" opacity="0.35"/>
+
+  <g opacity="0.22">
+    <path class="ink fine" d="M58,90 C148,44 238,122 332,88 S510,44 578,92"/>
+    <path class="ink fine" d="M838,88 C914,54 1022,68 1122,118"/>
+    <path class="ink fine" d="M72,538 C156,496 262,568 352,528"/>
+    <path class="ink fine" d="M860,512 C952,470 1038,556 1136,510"/>
+    <circle cx="216" cy="92" r="4" fill="#5d4a3a"/>
+    <circle cx="972" cy="94" r="3" fill="#5d4a3a"/>
+    <circle cx="296" cy="530" r="3" fill="#5d4a3a"/>
+    <circle cx="1038" cy="518" r="4" fill="#5d4a3a"/>
+  </g>
+
+  <g transform="translate(388 90)">
+    <rect x="0" y="0" width="424" height="450" rx="34" class="paperfill"/>
+    <rect x="24" y="30" width="376" height="338" rx="18" fill="#fbf5ea" stroke="#6a5644" stroke-width="2"/>
+    <line x1="24" y1="76" x2="400" y2="76" class="ink fine"/>
+    <circle cx="56" cy="53" r="7" fill="#d7b390" stroke="#6a5644" stroke-width="1.5"/>
+    <circle cx="82" cy="53" r="7" fill="#d7b390" stroke="#6a5644" stroke-width="1.5"/>
+    <circle cx="108" cy="53" r="7" fill="#d7b390" stroke="#6a5644" stroke-width="1.5"/>
+    <text x="212" y="58" text-anchor="middle" class="text title">CLAUDE WEEKLY</text>
+    <text x="212" y="99" text-anchor="middle" class="text small">REVIEW / CONTEXT / SKILLS</text>
+
+    <g transform="translate(86 124)">
+      <circle cx="126" cy="88" r="34" class="accent"/>
+      <circle cx="126" cy="26" r="34" class="accent"/>
+      <circle cx="180" cy="57" r="34" class="accent"/>
+      <circle cx="180" cy="119" r="34" class="accent"/>
+      <circle cx="72" cy="57" r="34" class="accent"/>
+      <circle cx="72" cy="119" r="34" class="accent"/>
+      <path class="ink bold" d="M126,20 C152,20 174,40 180,63 C191,86 186,118 166,132 C150,150 120,156 98,146 C74,140 56,118 54,92 C46,70 54,42 72,30 C86,16 108,12 126,20 Z"/>
+      <path class="ink mid" d="M126,20 C102,38 92,58 92,88 C92,118 104,136 126,146"/>
+      <path class="ink mid" d="M126,20 C150,38 160,58 160,88 C160,118 148,136 126,146"/>
+      <path class="ink mid" d="M72,57 C96,64 106,78 126,88 C146,98 156,112 180,119"/>
+      <path class="ink mid" d="M72,119 C96,112 106,98 126,88 C146,78 156,64 180,57"/>
+    </g>
+
+    <g transform="translate(70 286)">
+      <rect x="0" y="0" width="284" height="48" rx="10" fill="#f1e6d5" stroke="#6a5644" stroke-width="2"/>
+      <text x="18" y="20" class="text small">1M CONTEXT</text>
+      <rect x="18" y="28" width="248" height="8" rx="4" fill="#d9c0a0" stroke="#6a5644" stroke-width="1.2"/>
+      <rect x="18" y="28" width="210" height="8" rx="4" fill="#b98357"/>
+      <text x="240" y="20" class="text small">GA</text>
+    </g>
+
+    <circle cx="212" cy="400" r="18" class="ink mid"/>
+  </g>
+
+  <g transform="translate(92 150)">
+    <rect x="0" y="0" width="220" height="212" rx="18" class="panel"/>
+    <text x="22" y="28" class="text label">CODE REVIEW</text>
+    <line x1="20" y1="40" x2="196" y2="40" class="ink fine"/>
+    <rect x="22" y="58" width="18" height="18" class="accent"/>
+    <path class="ink mid" d="M28,68 l6,6 l12,-14"/>
+    <text x="52" y="72" class="text small">parallel agents</text>
+    <rect x="22" y="92" width="18" height="18" class="accent"/>
+    <path class="ink mid" d="M28,102 l6,6 l12,-14"/>
+    <text x="52" y="106" class="text small">bug verify</text>
+    <rect x="22" y="126" width="18" height="18" class="accent"/>
+    <path class="ink mid" d="M28,136 l6,6 l12,-14"/>
+    <text x="52" y="140" class="text small">severity rank</text>
+    <path class="ink mid" d="M28,174 h112"/>
+    <path class="ink bold" d="M28,174 h148"/>
+    <path class="ink mid" d="M28,194 h92"/>
+    <text x="22" y="196" class="text small">PR FLOW</text>
+  </g>
+
+  <g transform="translate(878 136)">
+    <rect x="0" y="0" width="234" height="236" rx="18" class="panel"/>
+    <text x="24" y="28" class="text label">WORKFLOW</text>
+    <line x1="22" y1="42" x2="206" y2="42" class="ink fine"/>
+    <rect x="24" y="62" width="76" height="56" fill="#f8f1e5" stroke="#6a5644" stroke-width="1.8"/>
+    <line x1="36" y1="78" x2="88" y2="78" class="ink fine"/>
+    <line x1="36" y1="92" x2="88" y2="92" class="ink fine"/>
+    <line x1="36" y1="106" x2="68" y2="106" class="ink fine"/>
+    <rect x="134" y="62" width="72" height="56" fill="#f8f1e5" stroke="#6a5644" stroke-width="1.8"/>
+    <polyline class="ink mid" points="146,104 160,92 172,98 186,80 196,72"/>
+    <line x1="108" y1="90" x2="126" y2="90" class="ink mid"/>
+    <path d="M126,90 l-8,-5 v10 z" fill="#5d4a3a"/>
+    <rect x="24" y="148" width="182" height="54" rx="10" fill="#f8f1e5" stroke="#6a5644" stroke-width="1.8"/>
+    <text x="38" y="170" class="text small">EXCEL  POWERPOINT</text>
+    <text x="38" y="190" class="text small">shared context + skills</text>
+  </g>
+
+  <g transform="translate(112 404)">
+    <circle cx="82" cy="70" r="54" class="paperfill"/>
+    <circle cx="82" cy="70" r="20" class="ink mid"/>
+    <path class="ink mid" d="M82,16 v-24"/>
+    <path class="ink mid" d="M82,124 v24"/>
+    <path class="ink mid" d="M28,70 h-24"/>
+    <path class="ink mid" d="M136,70 h24"/>
+    <circle cx="82" cy="-8" r="8" class="accent"/>
+    <circle cx="82" cy="148" r="8" class="accent"/>
+    <circle cx="4" cy="70" r="8" class="accent"/>
+    <circle cx="160" cy="70" r="8" class="accent"/>
+    <text x="82" y="76" text-anchor="middle" class="text small">ANZ</text>
+  </g>
+
+  <g transform="translate(866 420)">
+    <rect x="0" y="0" width="258" height="122" rx="16" class="panel"/>
+    <text x="22" y="28" class="text label">PARTNER NET</text>
+    <line x1="20" y1="40" x2="232" y2="40" class="ink fine"/>
+    <circle cx="54" cy="78" r="16" class="accent"/>
+    <circle cx="128" cy="68" r="16" class="accent"/>
+    <circle cx="204" cy="82" r="16" class="accent"/>
+    <line x1="70" y1="76" x2="112" y2="70" class="ink mid"/>
+    <line x1="144" y1="70" x2="188" y2="80" class="ink mid"/>
+    <text x="22" y="108" class="text small">$100M / cert / support</text>
+  </g>
+
+  <text x="600" y="590" text-anchor="middle" class="text small">2026-03-23  CLAUDE  NEWSLETTER BANNER</text>
+</svg>
