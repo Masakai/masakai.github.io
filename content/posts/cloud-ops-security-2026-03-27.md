@@ -2,7 +2,7 @@
 title = "クラウドサーバー運用、セキュリティ対応が地味にしんどい話"
 date = "2026-03-27T01:00:00+09:00"
 draft = false
-featured_image = "/images/cloud-ops.png"
+featured_image = "/images/cloud-ops.jpg"
 tags = ["インフラ", "セキュリティ", "クラウド運用", "fail2ban"]
 +++
 
