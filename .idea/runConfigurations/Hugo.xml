@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Hugo" type="HugoRunConfiguration" factoryName="HugoConfigurationFactory">
+    <option name="workingDirectory" value="$PROJECT_DIR$" />
+    <option name="additionalArgs" value="" />
+    <method v="2" />
+  </configuration>
+</component>
