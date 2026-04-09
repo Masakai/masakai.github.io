@@ -1,4 +1,4 @@
-# Hugo ニュースレター生成チーム
+# Hugo ニュースレター生成チーム（Codex エージェント版）
 
 このフォルダでは、信頼性の高い一次資料（企業公式ブログ等）をもとに、Hugo ブログ用の週刊ニュースレターを4役のチーム構造で作成します。
 
@@ -8,21 +8,16 @@
 
 ### 🔍 サーチャー
 **指揮者（ユーザー）から受け取るもの：**
-- 収集テーマ（例：生成LLM・AIエージェント）
+- 収集テーマ（5テーマのいずれか）
 - 収集期間（例：直近1週間）
 
 **作業内容：**
-- 以下の一次資料ソースを優先して検索する
-  - OpenAI Blog（openai.com/blog）
-  - Anthropic Blog（anthropic.com/news）
-  - Google DeepMind Blog（deepmind.google/blog）
-  - Google Research Blog（research.google/blog）
-  - Meta AI Blog（ai.meta.com/blog）
-  - Mistral AI News（mistral.ai/news）
-  - Hugging Face Blog（huggingface.co/blog）
-  - Microsoft Research Blog（microsoft.com/en-us/research/blog）
+- ユーザーが指定したテーマから `CLAUDE.md` の「テーマ別情報源・テンプレート一覧」を参照し、対応する一次資料ソースのみを検索対象とする
 - 信頼性の低いまとめサイト・二次情報は除外する
 - 収集した情報（タイトル・概要・URL）をライターに渡す
+
+**テーマ別対応ガイド：**
+- 詳細は `CLAUDE.md` の「テーマ別情報源・テンプレート一覧」セクションを参照
 
 ---
 
@@ -35,17 +30,17 @@
 - 企業・組織ごとにセクション分けする
 - URL はそのまま記事直下に記載する
 - 冒頭に `<!-- REVIEWER_SUMMARY_HERE -->` プレースホルダーを挿入してレビュアーに渡す
-- Hugo front matter（TOML形式）を含める：
+- Hugo front matter（TOML形式）を含める。**テンプレートは `CLAUDE.md` の「テーマ別情報源・テンプレート一覧」から対応テーマを参照する**
   ```toml
   +++
-  title = "LLM・AIエージェント週刊ニュース (YYYY-MM-DD〜YYYY-MM-DD)"
+  title = "テーマに応じた記事タイトル (YYYY-MM-DD〜YYYY-MM-DD)"
   date = YYYY-MM-DDThh:mm:ss+09:00
-  tags = ["AI", "LLM", "エージェント", "生成AI"]
+  tags = ["テーマ別タグ"]
   draft = false
-  featured_image = "/images/astronomy.png"
+  featured_image = "/images/theme-slug.png"
   +++
   ```
-  ※ `date` は時刻まで含めた ISO 8601 形式（例：`2026-03-20T09:00:00+09:00`）で記載すること
+  ※ `date` は時刻まで含めた ISO 8601 形式（例：`2026-04-09T09:00:00+09:00`）で記載すること
   ※ `date` には記事を作成した時刻を入れること。未来時刻は入れず、実際の作成時点以前の時刻にすること
   ※ `featured_image` は暫定値として記載し、イラストレータ工程で最終的な画像パスへ更新すること
 
@@ -59,13 +54,17 @@
 - プレースホルダーを削除し、代わりに `## 今週のトレンド分析` セクションを冒頭に挿入する
 - 以下の内容を含める：
   1. **収集期間全体のトレンドと構造的変化**（2〜3点）
-  2. **オープン系 vs クローズド系の動向比較**（あれば）
+  2. **テーマ別の推奨分析軸**（`CLAUDE.md` の「テーマ別情報源・テンプレート一覧」内のレビュアー軸参照）
   3. **読者への語りかけ**（「自分の仕事にどう使えるか」を促すメッセージ）
 - **文体はフレンドリーで親しみやすく**：
   - 「〜ですね」「〜感じ」「ざっくり言うと」などの語り口を使う
   - 論文・レポート調の「〜である」「〜だろう」は避ける
   - 絵文字を自然な範囲で使用する（1セクションにつき0〜1個が目安）
   - 締めは読者への問いかけや促しで終わる
+- **AI らしさを省く**：
+  - トレンド分析完成後、`/humanizer-ja` スキルを実行
+  - 文章全体から「AIが書いた感」を取り除き、人間らしい自然な日本語に変換
+  - 不自然な表現、一般的すぎる論調、定型句を修正
 - **レイアウト調整（仕上げ）**：
   - 各記事の見出し（`**タイトル**`）と本文要約の間に空行を入れ、読みやすく整える
   - トレンド分析内の番号付き見出し（`**①**` `**②**` など）と本文の間にも空行を入れる
@@ -83,8 +82,9 @@
 **作業内容：**
 - 記事全体のテーマとトレンド分析を踏まえ、内容に合致したバナー画像を作成する
 - 画風は `static/images/` 配下の既存画像群に合わせ、サイト全体のトーンから浮かないテイストにする
-- 生成した画像は `static/images/` に保存し、記事内容と発行日が分かるファイル名を付ける
-- 記事の Hugo front matter にある `featured_image = "/images/astronomy.png"` を、作成した画像のパスへ修正する
+- 生成した画像は `static/images/` に保存し、テーマとファイル名パターンが分かるファイル名を付ける
+  - 例：`manufacturing-sme-2026-04-09.png`, `deburring-polishing-2026-04-09.svg`
+- 記事の Hugo front matter にある `featured_image = "/images/theme-slug.png"` を、作成した画像のパスへ修正する
 - 画像差し替え後の Markdown を最終成果物として出力する
 
 ---
@@ -92,7 +92,12 @@
 ## 出力ファイル
 
 - **保存先：** このフォルダ（`report_riverruns/`）直下
-- **ファイル名：** `llm-agent-weekly-YYYY-MM-DD.md`（末尾は発行日）
+- **ファイル名：** テーマに応じた命名規則を使う。詳細は `CLAUDE.md` の「テーマ別情報源・テンプレート一覧」参照
+  - AI・LLM → `llm-agent-weekly-YYYY-MM-DD.md`
+  - 国内製造業DX → `manufacturing-sme-review-YYYY-MM-DD.md`
+  - 航空宇宙 → `aerospace-domestic-weekly-YYYY-MM-DD.md`
+  - 精密金属加工 → `precision-metal-weekly-YYYY-MM-DD.md`
+  - バリ取り・研磨 → `deburring-polishing-weekly-YYYY-MM-DD.md`
 - **形式：** Hugo 用 Markdown（TOML front matter 付き）
 
 ---
@@ -102,8 +107,14 @@
 以下を伝えるだけで4チームが動きます：
 
 ```
-テーマ：[例：生成LLM・AIエージェント]
+テーマ：[AI・LLMエージェント / 国内製造業DX / 航空宇宙（国内）/ 精密金属加工 / バリ取り・研磨 のいずれか]
 期間：[例：直近1週間 / 直近2週間 / 直近1ヶ月]
 ```
 
-Codex はこの AGENTS.md を読み込み、サーチャー → ライター → レビュアー → イラストレータの順でチームを編成して Hugo 用 Markdown とバナー画像を生成します。
+Codex はこの AGENTS.md を読み込み、サーチャー → ライター → レビュアー → イラストレータの順でチームを編成して Hugo 用 Markdown と対応する画像を生成します。
+
+---
+
+## 参考：テーマ別情報源の詳細
+
+各テーマの詳細な一次資料ソースリストは `CLAUDE.md` に集約されています。サーチャーは各ステップで `CLAUDE.md` の「テーマ別情報源・テンプレート一覧」セクションを参照し、対応するテーマの情報源を使用してください。
