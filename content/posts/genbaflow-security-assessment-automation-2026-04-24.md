@@ -1,6 +1,6 @@
 +++
 title = "GenbaFlowのセキュリティアセスメントをどう自動化しているか"
-date = 2026-04-24T16:30:00+09:00
+date = 2026-04-24T12:30:00+09:00
 draft = false
 featured_image = "/images/genbaflow-security-assessment-2026-04-24.png"
 tags = ["GenbaFlow", "セキュリティ", "ISO27005", "Claude", "GitHub Actions"]
