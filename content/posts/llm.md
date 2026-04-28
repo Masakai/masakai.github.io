@@ -1,14 +1,12 @@
 ---
 title: "LLMとはなんぞや — 持論としてのまとめ"
 date: 2026-04-29T03:04:50+09:00
-draft: true
+draft: false
 slug: "llm"
 featured_image: "/images/llm-2026-04-29.png"
 description: "40年来のコンピュータエンジニアが、Claude Sonnet 4.6 との長い対話を経て辿り着いた考察。"
 type: "post"
 ---
-
-# LLMとはなんぞや — 持論としてのまとめ
 
 > 40年来のコンピュータエンジニアが、Claude Sonnet 4.6 との長い対話を経て辿り着いた考察。
 
